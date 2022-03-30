@@ -57,3 +57,45 @@ target_compile_features(HelloWorld PUBLIC cxx_std_20)
 	> * cmake -G \"MSYS Makefiles\" ..
 	> * make
 	> * ./HelloWorld
+	
+# Once done
+Once the above has been done, you can update the cpp application and then simply run "cmake -G \"MSYS Makefiles\" .." followed by "make" inside of the minGW terminal while inside of the build folder.
+To make this slightly easier we can actually create a batch file to do this for us, meaning we only have to then call one file to run.
+* Inside of the build folder, create a build.sh file.
+* Inside of this we enter the following code
+```
+#!/bin/bash
+cmake -G \"MSYS Makefiles\" ..
+make
+```
+Now when we run ./build.sh we will run both the cmake command and make command.
+
+# Helpful Linus Terminal Commands
+https://cheatography.com/davechild/cheat-sheets/linux-command-line/
+* Get to root
+cd /
+
+* Get to home
+cd ~
+
+* Go up a dir
+cd ..
+
+* Go to previous dir
+cd -
+
+* Make folder
+mkdir FolderName
+
+* Delete Empty folder
+rmdir
+
+* Delete Folder and all inside
+rm -r FolderName
+
+* Copy file
+cp fileToCopy destinationName
+
+* List directory with info
+ls -l
+
