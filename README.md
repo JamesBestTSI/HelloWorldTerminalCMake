@@ -29,8 +29,8 @@ int main(){
 ```
 * Press CTRL+X to exit and save the file.
 * Run the folowing:
-	> cd ..
-	> nano CMakeLists.txt
+	> * cd ..
+	> * nano CMakeLists.txt
 
 * Enter the following to create the cmake file (# lines can be ignored)
 ```
@@ -53,7 +53,7 @@ target_compile_features(HelloWorld PUBLIC cxx_std_20)
 * Press CTRL+X to exit and save the file.
 
 * Run the folowing:
-	> cd build
-	> cmake -G \"MSYS Makefiles\" ..
-	> make
-	> ./HelloWorld
+	> * cd build
+	> * cmake -G \"MSYS Makefiles\" ..
+	> * make
+	> * ./HelloWorld
