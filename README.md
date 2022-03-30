@@ -65,7 +65,7 @@ To make this slightly easier we can actually create a batch file to do this for 
 * Inside of this we enter the following code
 ```
 #!/bin/bash
-cmake -G \"MSYS Makefiles\" ..
+cmake -G "MSYS Makefiles" ..
 make
 ```
 Now when we run ./build.sh we will run both the cmake command and make command.
