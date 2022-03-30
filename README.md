@@ -142,7 +142,7 @@ EXAMPLE
 #define PRINTER_H
 #include <iostream>
 
-namespace JamesStuff{
+namespace LibaryName{
 
     void Printer(std::string textToPrint);
 }
@@ -156,7 +156,7 @@ namespace JamesStuff{
 ```
 # Create a libary linker
 add_library(
-    JamesStuff
+    LibaryName STATIC
     src/printer.h
     src/printer.cpp
 )
@@ -164,5 +164,27 @@ add_library(
 * Link that new libary to the EXE of the project
 ```
 # Link libaries to EXE
-target_link_libraries(HelloWorld PRIVATE JamesStuff)
+target_link_libraries(HelloWorld PRIVATE LibaryName)
+```
+
+
+# Including Sub Directories
+* Create a folder in the same directory as the current CMakeLists.txt
+* In the first CMakeLists.txt now add
+```
+add_subdirectory(folderName)
+```
+* Move your libary .cpp and .h into your new sub directory
+* Create a CMakeLists.txt inside that the sub directory
+* Move the add_libary() function from the first CMakeLists.txt into the new sub directory one
+* Include 
+```
+target_include_directories(LibaryName PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/Path/To/Libary/Dir")
+```
+* Update any Includes to now point to new .h file locations
+```
+EXAMPLE
+#include "printer.h"
+to
+#include "LibaryName/printer.h"
 ```

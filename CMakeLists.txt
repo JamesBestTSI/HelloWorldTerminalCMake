@@ -4,12 +4,8 @@ cmake_minimum_required(VERSION 3.10)
 # Set the project_name and version
 project(HelloWorld VERSION 1.0)
 
-# Create a libary linker
-add_library(
-    JamesStuff
-    src/printer.h
-    src/printer.cpp
-)
+# Add sub directory
+add_subdirectory(src/JamesStuffLib) 
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 20)

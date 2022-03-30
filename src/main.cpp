@@ -1,5 +1,5 @@
 #include <iostream>
-#include "printer.h"
+#include "JamesStuffLib/printer.h"
 
 int main(){
     JamesStuff::Printer("HelloWorld!");
