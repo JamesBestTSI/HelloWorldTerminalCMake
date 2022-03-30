@@ -131,3 +131,38 @@ Example
 * Type CMake:Configure
 * You should now see in the dropdown lost GCC 11.2.0 for MinGW32
 * Then Build
+
+# Linking libaries
+* Create a .h and .cpp file for a new libary
+* In the .h add in the #ifndef stuff
+* Create a namespace for the libary and add a function that libary can call
+```
+EXAMPLE
+#ifndef PRINTER_H
+#define PRINTER_H
+#include <iostream>
+
+namespace JamesStuff{
+
+    void Printer(std::string textToPrint);
+}
+
+#endif
+```
+* Inside the cpp file create the actual code for the function
+* We now have a "libary" set up but it needs linking
+* Open CMakeLists.txt
+* Add the Namespace, cpp file and h file into a add_libary function
+```
+# Create a libary linker
+add_library(
+    JamesStuff
+    src/printer.h
+    src/printer.cpp
+)
+```
+* Link that new libary to the EXE of the project
+```
+# Link libaries to EXE
+target_link_libraries(HelloWorld PRIVATE JamesStuff)
+```
