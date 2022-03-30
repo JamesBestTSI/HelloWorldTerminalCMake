@@ -3,18 +3,18 @@ HelloWorld built through terminal and CMake
 ## Instructions
 * Download and install msys2 following the install instructions on their site.
 * Update environment variables:
-	> Hit the Winkey typing "env" and selecting "Edit the system enviroment variables"
-	> Press the environment variables buttom and the Advanced tab
-	> In the System variables section look for the "Path" entry, select it and hit "Edit"
-	> Click "New" and enter the location of the MSYS2 mingw64 bin directory (C:\msys64\mingw64\bin)
-	> Okay out of all open windows
+	> * Hit the Winkey typing "env" and selecting "Edit the system enviroment variables"
+	> * Press the environment variables buttom and the Advanced tab
+	> * In the System variables section look for the "Path" entry, select it and hit "Edit"
+	> * Click "New" and enter the location of the MSYS2 mingw64 bin directory (C:\msys64\mingw64\bin)
+	> * Okay out of all open windows
 
 * Open MSYS2 MinGW x64 Terminal
 * Run the folowing:
-	> mkdir HelloWorldTerminal
-	> mkdir HelloWorldTerminal/src
-	> cd HelloWorldTerminal/src
-	> nano main.cpp
+	> * mkdir HelloWorldTerminal
+	> * mkdir HelloWorldTerminal/src
+	> * cd HelloWorldTerminal/src
+	> * nano main.cpp
 	
 This creates the directory HelloWorldTerminal that we will be working in as well as the src folder for our source files
 This then opens up the nano text editor so we can enter stuff into a main.cpp file.
