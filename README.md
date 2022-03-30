@@ -116,7 +116,7 @@ ls -l
 
         "CMAKE_MAKE_PROGRAM": "C:/msys64/usr/bin/make.exe"
 
-    },
+    }
 ```
 * Make sure that you append a "," to the end of the last line that was in the settings too, as we are adding a new element
 ```
