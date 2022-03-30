@@ -1,5 +1,7 @@
 #include <iostream>
+#include "printer.h"
+
 int main(){
-    std::cout << "Hello World" << std::endl;
+    JamesStuff::Printer("HelloWorld!");
     return 0;
 }
