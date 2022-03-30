@@ -110,13 +110,20 @@ ls -l
 * Open the Extentions Dropdown, then select CMake Tools
 * Scroll down to Cmake: Generator and enter MSYS Makefiles
 * Look for CMake>Statusbar:Advanced and click Edit in settings.json
-* Add the following
+* Add the following just before the last }
 ```
 "cmake.configureSettings": {
 
         "CMAKE_MAKE_PROGRAM": "C:/msys64/usr/bin/make.exe"
 
     },
+```
+* Make sure that you append a "," to the end of the last line that was in the settings too, as we are adding a new element
+```
+Example
+    "cmake.generator": "MSYS Makefiles"
+	to
+    "cmake.generator": "MSYS Makefiles",
 ```
 * Create the CMakeLists.txt
 * Create a HelloWorld.cpp
