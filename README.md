@@ -99,3 +99,28 @@ cp fileToCopy destinationName
 * List directory with info
 ls -l
 
+# Install CMake for Visual Studio Code
+* Open Visual Studio code
+* Open extentions
+* Search for CMake Tools by Microsoft
+* Install
+
+## Configure
+* Press file > Preferences > Settings
+* Open the Extentions Dropdown, then select CMake Tools
+* Scroll down to Cmake: Generator and enter MSYS Makefiles
+* Look for CMake>Statusbar:Advanced and click Edit in settings.json
+* Add the following
+```
+"cmake.configureSettings": {
+
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/usr/bin/make.exe"
+
+    },
+```
+* Create the CMakeLists.txt
+* Create a HelloWorld.cpp
+* Press CTRL+SHIFT+P
+* Type CMake:Configure
+* You should now see in the dropdown lost GCC 11.2.0 for MinGW32
+* Then Build
