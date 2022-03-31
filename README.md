@@ -70,7 +70,7 @@ make
 ```
 Now when we run ./build.sh we will run both the cmake command and make command.
 
-# Helpful Linus Terminal Commands
+# Helpful Linux Terminal Commands
 https://cheatography.com/davechild/cheat-sheets/linux-command-line/
 * Get to root
 cd /
